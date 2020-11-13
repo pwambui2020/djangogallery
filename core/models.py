@@ -9,6 +9,9 @@ class Images(models.Model):
     location = models.CharField()
     category = models.CharField()
     
+    def save_image(self):
+        self.save()
+    
   
 class Location(models.Model):
     name = models.CharField()
