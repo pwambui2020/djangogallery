@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from dashboard.models import Order
 
 # Create your views here.
 from django.http  import HttpResponse
@@ -16,3 +17,6 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'all-news/search.html',{"message":message})
+    
+def dashboard_with_pivot(request):
+    return render(request, 'dashboard_with_pivot.html', {})
