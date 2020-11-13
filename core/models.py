@@ -11,3 +11,6 @@ class Images(models.Model):
     category = models.CharField()
     
   
+class Location():
+    name = models.CharField()
+    
