@@ -12,14 +12,26 @@ class Images(models.Model):
     def save_image(self):
         self.save()
     
+    def delete_image(self):
+        self.delete()
+        
+    def update_image(self):
+        self.save()
+    
   
 class Location(models.Model):
     name = models.CharField()
     description = models.TextField()
     Images = models.ForeignKey(Images,on_delete=models.CASCADE,)
     
+    def __str__(self):
+        return self.first_name
+    
 class Category(models.Model):
     name = models.CharField()
     description = models.TextField()
     Images = models.ForeignKey(Images,on_delete=models.CASCADE,)
+    
+    def __str__(self):
+        return self.first_name
     
