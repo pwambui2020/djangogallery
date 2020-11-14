@@ -1,4 +1,5 @@
 {% load bootstrap3 %}
+{% load static%}
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,19 +13,20 @@
 
   {% block styles %}
     {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/basenice.css' %}">
   {% endblock %}
 
 
 </head>
 <body>
+    {% include "navbar.html" %}
     {% block content %} <h1 class='text-center'>SELECT FROM THIS CATEGORY:</h1> 
-
     <h3><button type="button" class="btn btn-link"> Nature</button> </h3>
     <h3><button type="button" class="btn btn-link"> clothing</button></h3>
     <h3><button type="button" class="btn btn-link"> City</button></h3>
 
+   
     <h1 class='text-center'>SELECT FROM THIS LOCATION:</h1> 
-
     <h3><button type="button" class="btn btn-link">KENYA</button> </h3>
     <h3><button type="button" class="btn btn-link">UGANDA</button></h3>
     <h3><button type="button" class="btn btn-link">RWANDA</button></h3>
