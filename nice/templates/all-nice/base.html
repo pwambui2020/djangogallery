@@ -1,3 +1,4 @@
+{% load bootstrap3 %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,14 +10,31 @@
     <title> WAMBO'S GALLERY </title>
   {% endif %}
 
+  {% block styles %}
+    {% bootstrap_css %}
+  {% endblock %}
+
+
 </head>
 <body>
-    {% block content %} <h1>SELECT FROM THIS CATEGORY:</h1> 
-    <h3>Nature </h3>
-    <h3>City</h3>
-    <h3>Clothing</h3>
-    
-    
+    {% block content %} <h1 class='text-center'>SELECT FROM THIS CATEGORY:</h1> 
+
+    <h3><button type="button" class="btn btn-link"> Nature</button> </h3>
+    <h3><button type="button" class="btn btn-link"> clothing</button></h3>
+    <h3><button type="button" class="btn btn-link"> City</button></h3>
+
+    <h1 class='text-center'>SELECT FROM THIS LOCATION:</h1> 
+
+    <h3><button type="button" class="btn btn-link">KENYA</button> </h3>
+    <h3><button type="button" class="btn btn-link">UGANDA</button></h3>
+    <h3><button type="button" class="btn btn-link">RWANDA</button></h3>
     {%endblock%}
+
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %}
+
+    {%endblock%}
+
 </body>
 </html>
