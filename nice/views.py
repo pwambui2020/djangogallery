@@ -10,5 +10,6 @@ def welcome(request):
 def category(request):
     
     return render(request, 'all-nice/category.html')
+
 def location(request):
     return render(request, 'all-nice/location.html')
