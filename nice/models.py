@@ -16,8 +16,14 @@ class Images(models.Model):
         ordering = ['image']
     
 
-# class Location(models.Model):
-   
+class Location(models.Model):
+        name = models.CharField(max_length =30)
+        def __str__(self):
+            return self.name
 
-# class Category(models.Model):
+     
+class Category(models.Model):
+    name = models.CharField(max_length =30)
+    def __str__(self):
+        return self.name
    
