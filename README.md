@@ -26,6 +26,8 @@ This is an amazing application to showcase beautiful pictures. Users can view ph
 
 Clone the repo on https://github.com/pwambui2020/djangogallery.git
 
+Figma design https://www.figma.com/file/pi3RM3x2PrXbj37IueQPfr/Untitled?node-id=0%3A1
+
 Activate the virtual environment:python3.6 -m venv virtual 
                                 then source virtual/bin/activate
 
@@ -47,8 +49,8 @@ Create .env file and paste paste the following filling where appropriate:
 * DEBUG = True
 
 # Run initial Migration
-python3.6 manage.py makemigrations gallery
-python3.6 manage.py migrate
+* python3.6 manage.py makemigrations gallery
+* python3.6 manage.py migrate
 
 # Run the app
 python3.6 manage.py runserver

@@ -20,23 +20,23 @@
 </head>
 <body>
     {% include "navbar.html" %}
-    {% block content %} <h1 class='text-center'>SELECT FROM THIS CATEGORY:</h1> 
-    <h3><button type="button" class="btn btn-link"> Nature</button> </h3>
-    <h3><button type="button" class="btn btn-link"> clothing</button></h3>
-    <h3><button type="button" class="btn btn-link"> City</button></h3>
+    {% block content %} 
 
-   
-    <h1 class='text-center'>SELECT FROM THIS LOCATION:</h1> 
-    <h3><button type="button" class="btn btn-link">KENYA</button> </h3>
-    <h3><button type="button" class="btn btn-link">UGANDA</button></h3>
-    <h3><button type="button" class="btn btn-link">RWANDA</button></h3>
+    <h1 class='text-center'>Welcome to WAMBO's Gallery!</h1>
+
     {%endblock%}
 
     {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    {% bootstrap_javascript %}
 
-    {%endblock%}
+    <script type="text/javascript">function copyToClipboard(element) {var myVar = document.getElementById(element);myVar.select();document.execCommand("copy");}</script>
+
+        {% bootstrap_javascript %}
+    {% endblock %}
 
 </body>
 </html>
+
+
+      
+

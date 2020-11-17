@@ -15,11 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-# from images import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('nice.urls')),
-    # path('',views.welcome, name='welcome')
-   
-  ]
+    ]
