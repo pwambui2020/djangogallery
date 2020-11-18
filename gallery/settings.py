@@ -21,7 +21,7 @@ from decouple import config,Csv
 
 
 MODE=config("MODE", default="dev")
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '7xxw-tu=$*omneni&v6p*e6c43u&1k(r$ajurb^)3!&(h)p-32'
 DEBUG = config('DEBUG', default=False, cast=bool)
 # development
 if config('MODE')=="dev":
@@ -57,7 +57,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7xxw-tu=$*omneni&v6p*e6c43u&1k(r$ajurb^)3!&(h)p-32'
+# SECRET_KEY = '7xxw-tu=$*omneni&v6p*e6c43u&1k(r$ajurb^)3!&(h)p-32'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -115,15 +115,15 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gallery',
-        'USER': 'wambui',
-    'PASSWORD': 'password',
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'gallery',
+#         'USER': 'wambui',
+#     'PASSWORD': 'password',
         
-    }
-}
+#     }
+# }
 
 
 # Password validation
@@ -150,7 +150,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Africa/Nairobi'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -172,11 +172,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Configure Django App for Heroku.
-django_heroku.settings(locals())
-
 cloudinary.config( 
   cloud_name = "dzv5d96u6", 
   api_key = "775292315189219", 
   api_secret = "q34G62AWtVzdXbM00uvWLZoU-Wc" 
 )
+# Configure Django App for Heroku.
+django_heroku.settings(locals())
