@@ -77,6 +77,7 @@ INSTALLED_APPS = [
     'nice.apps.NiceConfig',
     'bootstrap3',
     'cloudinary',
+    'django_csv_exports',
 ]
 
 MIDDLEWARE = [
